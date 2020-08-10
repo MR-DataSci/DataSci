@@ -1,0 +1,274 @@
+body {
+    font-family: 'EB Garamond', serif;
+    font-size: 22px;
+    text-align: center;
+    margin:auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.flex-container {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header {
+    width:100%;
+    height:100px;
+    position: fixed;
+    top:0;
+    background-color: white;
+    z-index:10;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+header h1{
+    margin-left:40px;
+    flex-shrink: 3;
+}
+
+nav span {
+    margin: 0 40px;
+    flex-shrink: 3;
+}
+
+a {
+    color:black;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.banner {
+    width:100%;
+    color: white;
+    background-color: rgb(7, 0, 56);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.banner p{
+    font-size: 30px;
+}
+
+main {
+    padding-top:100px;
+    margin:auto;
+}
+
+.content {
+    width:95%;
+    flex-direction: column;
+    position: relative;
+    margin:auto;
+}
+
+.content a {
+    text-decoration: underline;
+}
+
+.pages{
+    margin: auto;
+    width: 95%;
+    height:700px;
+}
+
+.item-line {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 25px 0;
+    padding: 50px 0;
+
+}
+
+/* Box general animation */
+
+.box {
+    position: relative;
+    overflow:hidden;
+    height: 400px;
+    width:30%;
+}
+
+.box .txt,
+.box .illustration {
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    transition: all 0.40s ease-in-out 0.2s;
+}
+
+.box .txt {
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.txt h2 {
+    font-variant: small-caps;
+    color: rgb(7, 0, 56);
+    border: rgb(7, 0, 56) solid 1.1px;
+    font-size: 2.8rem;
+}
+
+#box_border{
+    border: rgb(7, 0, 56) solid 3px;
+}
+
+/* Box specifics */
+.box1 img {
+    height:100%;
+    width: auto;
+}
+
+.box2 img {
+    height:auto;
+    width: 100%;
+}
+
+.box1 .txt {
+    left: 0px;
+}
+
+.box1 .illustration {
+    right:0;
+}
+
+.box2 .txt {
+    right:0;
+}
+
+.box2 .illustration {
+    left:0;
+}
+.box1:hover .txt {
+    left: -100%;
+}
+
+.box2:hover .txt {
+    right:-100%;
+}
+
+/* END BOX */
+
+#homepagecontact{
+    width: 300px;
+    height:100px;
+    border: rgb(7, 0, 56) solid 3px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    background-color: white;
+}
+
+#homepagecontact:hover{
+    color: white;
+    background-color: rgb(7, 0, 56);
+}
+
+
+footer {
+    position: relative;
+    background-color: rgb(7, 0, 56);
+    height:100px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+footer span {
+    color:white;
+    padding-left: 20px;
+}
+
+/* About page specifics*/
+.bio {
+    width: 95%;
+}
+
+.bio img {
+    width: 1000px;
+    margin-bottom:50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+
+/* Analyses pages specifics */
+.analysescomment {
+    width:90%;
+}
+.analysis-imgcontainer {
+    position: relative;
+    text-align: center;
+    color:rgba(7,0,56,0);
+    font-size: 20px;
+}
+
+.analysis-imgcontainer img {
+    width: 200px;
+    height: 200px;   
+}
+
+.analysis-txtcontainer {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    position: absolute;
+    justify-content: center;
+    left:50%;
+    bottom:51%;
+    transform: translate(-50%,50%);
+}
+
+.analysis-txtcontainer:hover {
+    color:rgb(7, 0, 56);
+    border: rgb(7, 0, 56) solid 1px;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.analysescomment p,
+.analysescomment ul{
+    text-align: justify;
+    text-indent: 50px;
+    line-height: 2em;
+}
+
+/* Contact page specifics */
+
+.contact {
+    width:90%;
+    margin:auto;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+
+#contact-pic {
+    width:auto;
+    height:500px;
+}
+
+.inquiries {
+    flex-direction: column;
+}
+
+.inquiries img {
+    width: 40%;
+    height: auto;
+}
+

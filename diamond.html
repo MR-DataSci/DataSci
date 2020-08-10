@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <head>
+        <title>MR DataSci - Diamond Predictor</title> 
+        <link href="ressources/css/style.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    </head>
+
+    <header class="flex-container">
+        <a href="index.html">
+            <div class="logo">
+                <h1>MR DataSci</h1>
+            </div>
+        </a>
+
+        <nav>
+            <span><a href="analyses.html"> Analyses & Models </a></span>
+            <span><a href="about.html"> About </a></span>
+            <span><a href="contact.html"> Contact </a></span>
+        </nav>
+
+    </header>  
+    
+    <main>
+        <a href="analyses.html">
+        <div class='banner'>
+            <h1>Diamond Price Predictor</h1>
+            <h3><em>- Diamonds are a data scientist’s best friend -</em></h3>
+
+        </div>
+        </a>
+
+    <div class="analysescomment content">
+
+        <p><a href="./about.html">As you may know</a>, I have worked for years in the jewelry industry.
+            When I started, I asked one of my coworkers how the prices of diamonds were set before brands bought them.
+            As it turns out, prices are set and weekly updated in a document called the Rapaport Diamond Report.
+            The problem is that you need to be a subscriber in order to access it, and I don’t want to do that.
+            So instead, how about we look at the prices and corresponding characteristics of some diamonds
+            and create a model so we are able to determine the prices ourselves?</p>
+        
+        <p>Before we start, a quick note:
+            the price of a diamond is mainly derived from what are commonly known as the 4C: Cut, Clarity, Carat, Color.
+            You can find more information on the <a href = "https://www.gia.edu/diamond-quality-factor">website of
+            the Gemmological Institute of America.</a></p>
+        
+        <p>For this reason, I decided that these are the inputs we are going to use to determine the prices in our model.
+            The reason is that if we came across a diamond that we wanted to estimate,
+            it would be pretty hard to get all of the other measurements that we have in this dataset.
+            <br>With that in mind, let’s begin and look at what we have here:</p>
+        
+        <p>First off, good news: we have no empty lines, which is going to make our task easier.
+            That said, when we have a closer look at that price column, we see that the prices cover a huge range,
+            going from $326 to $18,823 but with a median price at $2,401.
+            As a consequence, we can expect that our model will be much more efficient for lower priced diamonds
+            than more expensive ones since it will have had many more examples to train on. Let's check out the distribution of prices visually.</p>
+
+        <p>Looking at the distribution of the weight in carats of the diamonds in our dataset, it seems clear that our prices are correlated
+            to the weight of the diamonds, which feels like it makes sense, even without knowing much about diamonds.</p>
+
+        <p>So let's start transforming our dataset so we can work with it.
+            First, we will map the characteristics that we decided we would use as inputs. As we said earlier, these would be the 4C.
+            Carat is a numerical value, so we will let it be for now.
+            Clarity, Color and Cut, however, are strings. If we look at that GIA document,we will learn the following:</p>
+        <ul>
+            <li>Clarity is noted on a scale from IF (being the best, “Internally Flawless”) to I3 (being the worst, “Included”;</li>
+            <li>Color is noted on a scale from D (being the best) to Z;</li>
+            <li>Cut, according to GIA is noted from Excellent to Poor. Here, we find “Premium” and “Ideal”.
+                It does not really fit here, so let’s assume here that “Premium” is better than “Very Good” and that “Ideal” is the best;</li>
+        </ul>
+
+        <p>Okay, now that we have done that, let's drop the original columns as well as the ones we decided earlier were not
+            going to be useful for us.</p>
+        
+        <p>Now that we have a clean dataset, let's save our inputs in a variable and our target prices in another</p>
+
+        <p>We have several ways to create our model. We could do a multiple linear regression, but it might be a bit simplistic, 
+            so let's see what a neural network could do for us.</p>
+
+        <p>Let's split our data into three: train, validation and test, and standardize our inputs</p>
+
+        <p>We are ready to build our neural network. I have experiemented with different versions, number of layers, optimizers, etc.
+            This is one version that returns a good result.</p>
+
+        <p>We plot our losses to make sure there was no overfitting.</p>
+
+        <p>And now let's plot our predictions on our test data against the actual targets. If we get something close to a 45° line, it means
+            that our model performed well.</p>
+
+        <p>Looks pretty good, doesn't it? Just to confirm, let's get a metric value on how we did, like a root mean square error.</p>
+
+        <p>We get a value of around $600. What does that mean? It means that on average, our model is able to make predictions that will be
+            within $600 of the actual price. (as a comparison, I ran a multiple linear regression model on the same dataset which returned
+            a root mean square error of $1,224, more than double what we have!</p>
+
+        <p>Is it good? Well, I would argue that given our dataset, it is actually a pretty good result. Remember that 75% of our diamonds
+            were $5,324 or less, but that our maximum value was almost $19,000! Yet, despite of that our model is still able to predict credible prices even for bigger gems.</p>
+
+        <p>Let's look at a couple of examples:</p>
+
+        <p>And there it is! This works pretty well for diamonds that are 1 or 1.5 carat maximum.
+            However, if we wanted to really accurately predict prices for really big diamonds, we would first need to update our model
+            with a bigger sample that would give us a better view of what is happening for these.</p>
+
+        <p>I will soon post a tool here so that you can make predictions yourself using this model.</p>
+
+        <p>In the meantime, check out my other <a href="analyses.html">projects!</a></p>
+
+        <p>Dataset from <a href="https://www.kaggle.com/shivam2503/diamonds">Kaggle</a>, full code can be found: <a href="ressources/analyses/diamonds-NN.html">here</a>.</p>
+
+
+        
+    </div>
+
+    </main>
+
+    <footer >
+        <span>&copy; MR DataSci 2020</span>
+    </footer>
+
+</body>
+</html>
