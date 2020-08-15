@@ -262,13 +262,3 @@ footer span {
     width:auto;
     height:500px;
 }
-
-.inquiries {
-    flex-direction: column;
-}
-
-.inquiries .img {
-    width: 20%;
-    height: auto;
-}
-
