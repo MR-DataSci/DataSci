@@ -267,8 +267,8 @@ footer span {
     flex-direction: column;
 }
 
-.inquiries img {
-    width: 40%;
+.inquiries .img {
+    width: 20%;
     height: auto;
 }
 
