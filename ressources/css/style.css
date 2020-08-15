@@ -262,3 +262,21 @@ footer span {
     width:auto;
     height:500px;
 }
+
+.form-container {
+    padding:20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border:rgb(7, 0, 56) 1px solid;
+}
+
+.inputs {
+    width:500px;
+    height: 30px;
+    text-align: center;
+    margin: 5px;
+}
+
+.message {
+    height: 200px;
+    resize:none;
+}
