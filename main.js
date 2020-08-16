@@ -2,17 +2,18 @@
 const context = {
     analysesInfo: [
         {
-            link: './titanic.html',
-            name: 'Titanic survival prediction',
-            description: 'Creating a classification model using Logistic Regression and KNeareast Neighbors on the famous Titanic dataset',
-            image: './ressources/img/titanic.jpg'
-        },
-        {
             link: './diamond.html',
             name: 'Diamond price predictor',
             description: 'Creating a price prediction tool using an artificial neural network',
             image: './ressources/img/diamond.jpg'
         },
+        {
+            link: './titanic.html',
+            name: 'Titanic survival prediction',
+            description: 'Creating a classification model using Logistic Regression and KNeareast Neighbors on the famous Titanic dataset',
+            image: './ressources/img/titanic.jpg'
+        },
+        
         {
             link: './arebours.html',
             name: 'Text analysis',
@@ -40,7 +41,7 @@ let anim=500
 $(document).ready(() => {
     $('.articleBox').on('mouseenter', (event) => {
         $(event.currentTarget).children('.articleImageBox').delay(delay).animate({
-            left: '-300px'
+            left:'-25%'
         },anim)
         $(event.currentTarget).children('.articleDescriptionBox').delay(delay).animate({
             opacity: '1'
