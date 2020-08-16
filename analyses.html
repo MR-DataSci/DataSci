@@ -8,6 +8,32 @@
             <title>MR DataSci - Analyses & Models</title> 
             <link href="ressources/css/style.css" type="text/css" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+            <script id="articlesTemplate" type="text/x-handlebars-template">
+                {{#each analysesInfo}}
+                <div class="article">
+                
+                        <div class="articleBox" >
+                            <div class="articleImageBox">
+                                <img src={{this.image}}>
+                                
+                            </div>
+                            
+                            <div class="articleDescriptionBox">
+                                
+                                <h4>{{this.description}}</h4>
+
+                                <a href={{this.link}} alt={{this.name}}>
+                                    <h5 id="articleButton">Learn more...</h5>
+                                </a>
+                            </div>
+                        </div>     
+                        
+                </div>
+                <h3>{{this.name}}</h3>
+                {{/each}}
+            </script>
+
         </head>
 
         <header class="flex-container">
@@ -32,74 +58,20 @@
 
         </div>
 
-        <div class="pages">
+        <div class="pages" id='info'>
 
-            <div class ="item-line">
-    
-                <a href="titanic.html">
-                    
-                            
-                            <div class= 'analysis-imgcontainer'id="titanic">
-                                <img src="ressources/img/titanic.jpg">
-
-                                <div class='analysis-txtcontainer'>
-                                    <ul>
-                                        <li>Classification</li>
-                                        <li>Logistical Regression</li>
-                                        <li>KNearest Neighbors</li>
-                                    </ul>
-                                </div>
-                            </div>                                                    
-                            
-                    <!--<h2>Titanic</h2>-->
-                    
-                    
-                </a>
-                    
-                <a href="diamond.html">
-                        
-                        <div class= 'analysis-imgcontainer'id="diamond">
-                            <img src="ressources/img/diamond.jpg">
-
-                            <div class='analysis-txtcontainer'>
-                            </div>
-                        </div>
-
-                    <!--<h2>Diamond Price Predictor</h2>-->
-                    
-                </a>
-        
-                <a href="arebours.html">
-                            
-                        <div class= 'analysis-imgcontainer'id="arebours">
-                            <img src="ressources/img/arebours.jpg">
-
-                                <div class='analysis-txtcontainer'>
-                                </div>  
-                        </div>
-        
-                    <!--<h2>French Litterature</h2>-->                                                    
-                    
-                </a>
-                    
-                <a href="scrabble.html">
-                        <div class='analysis-imgcontainer' id="scrabble">
-                            <img src="ressources/img/scrabble.jpg">
-                                <div class='analysis-txtcontainer'>
-                                </div>
-                        </div>
-
-                    <!--<h2>Scrabble</h2>-->                         
-                </a>
-            </div>
-            
         </div>
+                
 
     </main>
 
     <footer >
         <span>&copy; MR DataSci 2020</span>
     </footer>
-
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script> 
+    <script src="main.js"></script>
 </body>
 </html>

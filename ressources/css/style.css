@@ -76,7 +76,6 @@ main {
 .pages{
     margin: auto;
     width: 95%;
-    height:700px;
 }
 
 .item-line {
@@ -209,44 +208,58 @@ footer span {
 
 
 
-/* Analyses pages specifics */
-.analysescomment {
-    width:90%;
-}
-.analysis-imgcontainer {
-    position: relative;
-    text-align: center;
-    color:rgba(7,0,56,0);
-    font-size: 20px;
-}
-
-.analysis-imgcontainer img {
-    width: 200px;
-    height: 200px;   
-}
-
-.analysis-txtcontainer {
-    width: 200px;
-    height: 200px;
-    padding: 10px;
-    position: absolute;
-    justify-content: center;
-    left:50%;
-    bottom:51%;
-    transform: translate(-50%,50%);
-}
-
-.analysis-txtcontainer:hover {
-    color:rgb(7, 0, 56);
+/* Article pages specifics */
+.article {
+    height:200px;
+    width:100%;
     border: rgb(7, 0, 56) solid 1px;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
-.analysescomment p,
-.analysescomment ul{
-    text-align: justify;
-    text-indent: 50px;
-    line-height: 2em;
+.articleBox {
+    width: 100%;
+    height: 200px;
+}
+
+.articleImageBox {
+    width: 400px;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    margin: auto;
+}
+
+.articleImageBox img {
+    width:300px;
+    height:200px;
+    border: rgb(7, 0, 56) solid 1px;
+}
+
+.articleDescriptionBox {
+    width: 60%;
+    height: 200px;
+    display: inline-block;
+    color:rgb(7, 0, 56);
+    position: absolute;
+    right:5%;
+    opacity: 0;
+}
+
+#articleButton {
+    display: flex;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    width:150px;
+    height:50px;
+    border: rgb(7, 0, 56) solid 1px;
+}
+
+#articleButton:hover {
+    color:white;
+    background-color: rgb(7, 0, 56);
 }
 
 /* Contact page specifics */
