@@ -11,9 +11,8 @@
             <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
             <script id="articlesTemplate" type="text/x-handlebars-template">
                 {{#each analysesInfo}}
-                <div class="article">
+                <div class="articleBox">
                 
-                        <div class="articleBox" >
                             <div class="articleImageBox">
                                 <img src={{this.image}}>
                                 
@@ -26,11 +25,10 @@
                                 <a href={{this.link}} alt={{this.name}}>
                                     <h5 id="articleButton">Learn more...</h5>
                                 </a>
-                            </div>
-                        </div>     
+                            </div> 
                         
                 </div>
-                <h3>{{this.name}}</h3>
+                <h3 class="articlenameBox">{{this.name}}</h3>
                 {{/each}}
             </script>
 
