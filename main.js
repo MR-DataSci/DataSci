@@ -36,7 +36,7 @@ document.getElementById('info').innerHTML = compiledHtml;
 
 //Animations
 
-let delay=400;
+let delay=300;
 let anim=500
 $(document).ready(() => {
     $('.articleBox').on('mouseenter', (event) => {
@@ -47,10 +47,10 @@ $(document).ready(() => {
             opacity: '1'
         },anim)
     }).on('mouseleave', () => {
-        $(event.currentTarget).children('.articleImageBox').delay(delay).animate({
+        $(event.currentTarget).children('.articleImageBox').delay(delay+200).animate({
             left:'0px'
         },anim)
-        $(event.currentTarget).children('.articleDescriptionBox').delay(delay).animate({
+        $(event.currentTarget).children('.articleDescriptionBox').delay(delay+200).animate({
             opacity: '0'
         },anim)
     })
