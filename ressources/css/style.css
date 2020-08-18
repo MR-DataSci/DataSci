@@ -4,6 +4,7 @@ body {
     text-align: center;
     margin:auto;
     background-color: rgb(255, 255, 255);
+    color: rgb(7, 0, 56);
 }
 
 .flex-container {
@@ -35,7 +36,7 @@ nav span {
 }
 
 a {
-    color:black;
+    color:rgb(7, 0, 56);
     text-decoration: none;
     cursor:pointer;
 }
@@ -43,7 +44,6 @@ a {
 .banner {
     width:100%;
     color: white;
-    background-color: rgb(7, 0, 56);
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -51,6 +51,7 @@ a {
     margin-bottom: 50px;
     margin-left:auto;
     margin-right:auto;
+    background-color: rgb(7, 0, 56);
 }
 
 .banner p{
@@ -116,7 +117,6 @@ main {
 
 .txt h2 {
     font-variant: small-caps;
-    color: rgb(7, 0, 56);
     border: rgb(7, 0, 56) solid 1.1px;
     font-size: 2.8rem;
 }
@@ -303,7 +303,19 @@ iframe {
     height: 30px;
     text-align: center;
     margin: 5px;
+    border:rgb(7, 0, 56) solid 1px;
 }
+
+.inputs, ::placeholder, button{
+    color: rgb(7, 0, 56);
+    font-family: 'EB Garamond', serif;
+    font-size:18px;
+}
+
+.inputs:focus {
+    border:rgb(7, 0, 56) solid 1.5px;
+}
+
 
 .message {
     height: 200px;

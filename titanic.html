@@ -6,6 +6,7 @@
         <title>MR DataSci - Titanic</title> 
         <link href="ressources/css/style.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
     </head>
 
     <header class="flex-container">
@@ -24,21 +25,69 @@
     </header>  
     
     <main>
-        <div class='banner'>
+        <a href="analyses.html">
+            <div class='banner'>
+                <h1>Titanic Survival Predictor</h1>
+                <h3><em>- What could go wrong? -</em></h3>
+    
+            </div>
+            </a>
 
-            <h1>Titanic</h1>
-
-        </div>
-
-    <div class="flex-container bio">
+    <div class="analysescomment content">
 
         <img src="ressources/img/titanic.jpg" />
 
-        
+    <p>Let’s have a look at two different models to determine if one would have survived the Titanic sinking, and see if one is significantly more accurate.</p>
+    Let’s look at the dataset:</p>
+
+    <p>What is of interest to us is the gender, class and age of each passenger and whether they made it or not. The rest will not be useful to train our model.
+    We first need to encode the gender and the class. Let’s first map the gender:</p>
+
+    <p>Then use the get_dummies() method on the Class column. We have no use for the third class column
+    (if a passenger is in neither first or second class, it means that they are in third), so let’s drop it.</p>
+
+	<p>We should check if there are any empty lines.</p>
+
+	<p>Looks like there are just a few in the age column. Let’s fill them with the mean age of the passengers.</p>
+
+    <p>Now let’s standardize our inputs.</p>
+
+    <p>Let’s clean our dataframe and check it one last time before creating our models:</p>
+
+    <p>Looks like we’re good to go. Let’s try two different solutions:</p>
+
+    <p>Logistic Regression</p>
+
+    <p>K-Nearest Neighbors</p>
+
+    <p>It seems like K-Nearest Neighbors is performing a bit better than Logistic Regression, so we will use it to feed it new data
+    and see how me and my better half are fairing. </p>
+    
+    <p>I’m 33, male, and my wife would not let me book us anything other than first class
+    (assumedly because it would enhance our survival chances, which is hard to argue against). Let’s see how we did:</p>
+	
+	<p>Well… I don’t like my odds. She, on the other hand, will be fine (after a period of mourning). </p>
+
+    <p>I assume my probable demise is a consequence of the “women & children first” rule aboard. Let’s check this assumption:
+    what is the survival rate of women vs. men, and the survival rate of passengers under 14?</p>
+
+    <p>Survival rate of women was 74.2%, while men’s was only 18.9%. As for passengers under 14, it was 58.44%,
+    although it should be noted that among those who did not make it, almost all of them were in third class.
+    
+    <p>Where you were staying definitely had some incidence on the outcome, as could be expected.
+    So it seems that our first instinct was right and that our model thinks I would likely not make it due to my gender.</p>
+
+    <p>I’ll just book a flight next time…</p>
+
+	<p>Try it yourself below:</p>
+
+    <iframe src="https://datasci-titanic.herokuapp.com/" height="550px"> </iframe>
+
+    <p>Dataset from <a href="https://www.kaggle.com/shivam2503/diamonds">Kaggle</a>, Full code available <a href="./analyses/Titanic-LRKNN.html">here</a>.</p>
         
     </div>
 
-    <iframe src="https://datasci-titanic.herokuapp.com/" height="550px"> </iframe>
+    
 
     </main>
 

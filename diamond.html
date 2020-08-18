@@ -6,6 +6,7 @@
         <title>MR DataSci - Diamond Predictor</title> 
         <link href="ressources/css/style.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
     </head>
 
     <header class="flex-container">
@@ -34,9 +35,9 @@
 
     <div class="analysescomment content">
 
-        <p><a href="./about.html">As you may know</a>, I have worked for years in the jewelry industry.
-            When I started, I asked one of my coworkers how the prices of diamonds were set before brands bought them.
-            As it turns out, prices are set and weekly updated in a document called the Rapaport Diamond Report.
+        <p><a href="./about.html">When I started working in the jewelry industry</a>,
+            I asked one of my coworkers how the prices of diamonds were set before brands bought them.
+            She said that prices are set and weekly updated in a document called the Rapaport Diamond Report.
             The problem is that you need to be a subscriber in order to access it, and I don’t want to do that.
             So instead, how about we look at the prices and corresponding characteristics of some diamonds
             and create a model so we are able to determine the prices ourselves?</p>
@@ -52,15 +53,15 @@
             <br>With that in mind, let’s begin and look at what we have here:</p>
         
         <p>First off, good news: we have no empty lines, which is going to make our task easier.
-            That said, when we have a closer look at that price column, we see that the prices cover a huge range,
+            However, we see that the prices cover a huge range
             going from $326 to $18,823 but with a median price at $2,401.
-            As a consequence, we can expect that our model will be much more efficient for lower priced diamonds
+            This means that we can expect our model to be much more efficient for lower priced diamonds
             than more expensive ones since it will have had many more examples to train on. Let's check out the distribution of prices visually.</p>
 
         <p>Looking at the distribution of the weight in carats of the diamonds in our dataset, it seems clear that our prices are correlated
             to the weight of the diamonds, which feels like it makes sense, even without knowing much about diamonds.</p>
 
-        <p>So let's start transforming our dataset so we can work with it.
+        <p>Let's start transforming our dataset so we can work with it.
             First, we will map the characteristics that we decided we would use as inputs. As we said earlier, these would be the 4C.
             Carat is a numerical value, so we will let it be for now.
             Clarity, Color and Cut, however, are strings. If we look at that GIA document,we will learn the following:</p>
