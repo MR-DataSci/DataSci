@@ -63,25 +63,9 @@ main {
     margin:auto;
 }
 
-.content {
-    width:95%;
-    flex-direction: column;
-    position: relative;
-    margin:auto;
-}
-
-.analysescomment {
-    width:75%;
-    text-align: justify;
-}
 
 .content a {
     text-decoration: underline;
-}
-
-.pages{
-    margin: auto;
-    width: 95%;
 }
 
 .item-line {
@@ -200,7 +184,8 @@ footer span {
 
 /* About page specifics*/
 .bio {
-    width: 95%;
+    width: 75%;
+    margin:auto;
 }
 
 .bio img {
@@ -277,11 +262,29 @@ footer span {
 }
 
 /* Analyses specifics */
-iframe {
-    padding: 20px;
-    background-color: rgb(7, 0, 56);
-    width:600px;
+.analysescomment {
+    width:1200px;
+    flex-direction: column;
+    position: relative;
+    margin:auto;
+    text-align: justify;
 }
+
+.analysescomment img {
+    display: block;
+    margin: auto;
+    padding: 20px;
+    width:1000px;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+    padding: 20px;
+    width:600px;
+    background-color: rgb(7, 0, 56);
+}
+
 
 /* Contact page specifics */
 
