@@ -70,6 +70,11 @@ main {
     margin:auto;
 }
 
+.analysescomment {
+    width:75%;
+    text-align: justify;
+}
+
 .content a {
     text-decoration: underline;
 }

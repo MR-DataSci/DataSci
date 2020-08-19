@@ -6,6 +6,7 @@
         <title>MR DataSci - French litterature</title> 
         <link href="ressources/css/style.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
     </head>
 
     <header class="flex-container">
@@ -26,33 +27,55 @@
     <main>
         <div class='banner'>
 
-            <h1>TL:DR - French litterature edition</h1>
+            <h1>TL:DR - French Litterature Edition</h1>
 
         </div>
 
-    <div class="flex-container bio">
+        <div class="content">
+            <div class="analysescomment">
 
-        <img src="ressources/img/arebours.jpg" />
+        <p>A rebours (Against the Grain) is a staple of the decadent literary movement.
+            Written by J.K Huysmans in 1884, it depicts the life of an eccentric, misanthropic nobleman named des Esseintes.
+            One of the peculiarities of the novel is the fact that it does not follow a classic story structure.
+            Instead, each chapter is essentially a description of des Esseintes’ s house, his book collection, views on religion, etc.
+            It is a very interesting and intriguing piece of literature but I would not call it an easy read,
+            and that is actually why I am writing about this today.</p>
+            
+            <p>Instead of going through the book ourselves, let’s distinguish the main theme of each chapter using Natural Language Processing.</p>
+            
+            <p>First, we need to actually get the book and create our dataset. We could copy paste everything, but should we?
+                That sounds troublesome. Luckily, we can use Beautiful Soup: </p>
 
-        <p>A rebours (Against the Grain) is a staple of the decadent literary movement. Written by J.K Huysmans in 1884, it depicts the life of an eccentric, misanthropic nobleman named des Esseintes. One of the peculiarities of the novel is the fact that it does not follow a classic story structure. Instead, each chapter is essentially a description of des Esseintes’ s house, his book collection, views on religion, etc. It is a very interesting and intriguing piece of literature but I would not call it an easy read, and that is actually why I am writing about this today. Instead of going through the book ourselves, let’s distinguish the main theme of each chapter using Natural Language Processing.
+            <p>Now that we have everything set, let's start our analysis. 
+            NLP is interesting because it leaves room for much interpretation and adjustment.
+            Stop words had to be added, the number of themes tweaked, etc. for a while before I was satisfied with the result.
+            I ended up settling on 10 themes that I thought were the most pertinent throughout the book.
+            (note: the book and therefore the project are in French, though the principle would be the same in English or any other language):</p>
+            <ul>
+                <li>Traveling</li>
+                <li>Perfume & Aromas</li>
+                <li>Music</li>
+                <li>Inside of home</li>
+                <li>Flowers</li>
+                <li>Family</li>
+                <li>Love</li>
+                <li>Spirituality & Religion</li>
+                <li>Poetry & Litterature</li>
+                <li>Colors & Gems</li>
+            </ul>
+            
+            <p>Now, what? We should make it visually appealing and readable, so let’s switch over to Tableau to do just that.</p>
 
-            Note: credit where credit is due, I followed Codecademy’s example for parts of this.
+            <img src="ressources/img/a rebours-tableau.jpg">
             
-            NLP is interesting because it leaves room for much interpretation and adjustment. Stop words had to be added, the number of themes tweaked, etc. for a while before I was satisfied with the result. I ended up settling on 10 themes that I thought were the most pertinent throughout the book:
-            Theme 1
-            Theme 2
-            …
-            
-            
-            Okay, now we have this, what? We should make it visually appealing and readable, so let’s switch over to Tableau to do just that.
-            
-            
-            And here we go. We have a nice visual representation of each theme and where it is referenced. Two quick passages of the book to check if our findings make sense:
-            [tortue, voyage]
-            
-            
-            Additionally, I made a similar project using a very similar code on Baudelaire’s les Fleurs du Mal (Flowers of Evil) and its 100 poems. Go check it out here: Baudelaire as I also used web scraping with Beautiful Soup to easily get every poem.</p>
+            <p>And here we go. We have a nice visual representation of each theme and where it is referenced.
+                Two chapters of the book to check if our findings make sense:</p>
+            <p><a href="https://en.wikisource.org/wiki/Against_the_Grain/Chapter_IV">Chapter_IV (in which we are expecting to read about colors and gems</a></p>
+            <p><a href="https://en.wikisource.org/wiki/Against_the_Grain/Chapter_XI">Chapter_XI (in which we are expecting to read about travel</a></p>
 
+            <p>Voilà! But still, do read the book, it is really great.</p>
+                    
+        </div>
         
     </div>
 
