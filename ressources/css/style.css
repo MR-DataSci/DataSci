@@ -63,7 +63,6 @@ main {
     margin:auto;
 }
 
-
 .content a {
     text-decoration: underline;
 }
@@ -75,7 +74,11 @@ main {
     flex-wrap: wrap;
     margin: 25px 0;
     padding: 50px 0;
+}
 
+.logo img {
+    height:50px;
+    margin-left: 40px;
 }
 
 /* Box general animation */
@@ -295,9 +298,9 @@ iframe {
     margin-bottom: 100px;
 }
 
-#contact-pic {
-    width:auto;
-    height:500px;
+#contact-logo {
+    width:450px;
+    height:450px;
 }
 
 .form-container {
