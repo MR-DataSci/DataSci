@@ -7,9 +7,17 @@
         <link href="ressources/css/style.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+            <script id="articlesTemplate" type="text/x-handlebars-template">
+                {{#each analysesInfo}}
+
+                    <li><a id="articleDropdown" href={{this.link}}>{{this.name}}</a></li>
+                
+                {{/each}}
+            </script>
     </head>
 
-    <header class="flex-container">
+    <header>
         <a href="index.html">
             <div class="logo">
                 <img src="ressources/img/logo.jpg" />
@@ -17,9 +25,15 @@
         </a>
 
         <nav>
-            <span><a href="analyses.html"> Analyses & Models </a></span>
-            <span><a href="about.html"> About </a></span>
-            <span><a href="contact.html"> Contact </a></span>
+            <span><a id="navlink" href="analyses.html"> Analyses & Models </a>
+                <div id = info class="dropdown">
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </span>
+            <span><a id="navlink" href="about.html"> About </a></span>
+            <span><a id="navlink" href="contact.html"> Contact </a></span>
         </nav>
 
     </header>  
@@ -118,6 +132,10 @@
     <footer >
         <span>&copy; MR DataSci 2020</span>
     </footer>
-
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script> 
+    <script src="main.js"></script>
 </body>
 </html>

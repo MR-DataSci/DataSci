@@ -54,4 +54,11 @@ $(document).ready(() => {
             opacity: '0'
         },anim)
     })
+    $('#navlink').on('mouseenter', (event) => {
+        $('.dropdown').animate({opacity:'1'},400)
+    })
+    $('.dropdown').on('mouseleave', () => {
+        $('.dropdown').animate({opacity:'0'},400)
+    })
+    
 })

@@ -7,9 +7,17 @@
         <link href="ressources/css/style.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+            <script id="articlesTemplate" type="text/x-handlebars-template">
+                {{#each analysesInfo}}
+
+                    <li><a id="articleDropdown" href={{this.link}}>{{this.name}}</a></li>
+                
+                {{/each}}
+            </script>
     </head>
 
-    <header class="flex-container">
+    <header>
         <a href="index.html">
             <div class="logo">
                 <img src="ressources/img/logo.jpg" />
@@ -17,9 +25,15 @@
         </a>
 
         <nav>
-            <span><a href="analyses.html"> Analyses & Models </a></span>
-            <span><a href="about.html"> About </a></span>
-            <span><a href="contact.html"> Contact </a></span>
+            <span><a id="navlink" href="analyses.html"> Analyses & Models </a>
+                <div id = info class="dropdown">
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </span>
+            <span><a id="navlink" href="about.html"> About </a></span>
+            <span><a id="navlink" href="contact.html"> Contact </a></span>
         </nav>
 
     </header>  
@@ -31,7 +45,7 @@
 
         </div>
 
-    <div class="flex-container bio">
+    <div class="bio">
 
         <img src="ressources/img/about_bw.jpg" />
 
@@ -39,13 +53,13 @@
 
             <p>Matthieu Rasset is a data scientist from Paris, France. 
                 <br>After graduating in International Business and spending a year and a half in China,
-                he started working as a sales associate in the luxury industry.</p>
+                he started working in sales in the luxury industry.</p>
             
             <p>After a few years specializing in watches and jewelry, Matthieu turned his attention to data science.
                 He uses his business background and experience together with his analytical mind and technical skills to create not only powerful predictive models and analyses with appealing visualizations,
                 but also to conceive engaging narratives in order to effectively convey his message and findings.</p>
             
-            <p>He is proficient in SQL, Python (numpy, scikit-learn, pandas, matplotlib, tensorflow,...) and Tableau.
+            <p>He is proficient in SQL, Python (numpy, scikit-learn, pandas, matplotlib, tensorflow,...), JavaScript and Tableau.
                 <br>You can find examples of his work <a href="analyses.html">here</a>.</p>
             
             <p>He enjoys arguing about movies, doing the New York Times Crosswords (and pretending he can finish the Saturday ones), and vintage watches.
@@ -68,6 +82,10 @@
     <footer >
         <span>&copy; MR DataSci 2020</span>
     </footer>
-
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script> 
+    <script src="main.js"></script>
 </body>
 </html>

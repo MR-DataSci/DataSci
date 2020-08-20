@@ -12,6 +12,7 @@
             <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
             <script id="articlesTemplate" type="text/x-handlebars-template">
                 {{#each analysesInfo}}
+                
                 <h3 class="articlenameBox">{{this.name}}</h3>
                 <div class="articleBox">
                 
@@ -36,7 +37,7 @@
 
         </head>
 
-        <header class="flex-container">
+        <header>
             <a href="index.html">
                 <div class="logo">
                     <img src="ressources/img/logo.jpg" />
@@ -44,9 +45,9 @@
             </a>
 
             <nav>
-                <span><a href="analyses.html"> Analyses & Models </a></span>
-                <span><a href="about.html"> About </a></span>
-                <span><a href="contact.html"> Contact </a></span>
+                <span><a id="navlink" href="analyses.html"> Analyses & Models </a></span>
+                <span><a id="navlink" href="about.html"> About </a></span>
+                <span><a id="navlink" href="contact.html"> Contact </a></span>
             </nav>
 
         </header>    
@@ -58,7 +59,7 @@
 
         </div>
 
-        <div class="pages" id='info'>
+        <div class="articleList" id='info'>
 
         </div>
                 
