@@ -12,7 +12,7 @@
     <header class="flex-container">
         <a href="index.html">
             <div class="logo">
-                <img src="ressources/img/logo.png" />
+                <img src="ressources/img/logo.jpg" />
             </div>
         </a>
 
@@ -35,45 +35,69 @@
 
     <div class="analysescomment content">
 
-    <p>Let’s have a look at the famous Kaggle dataset and build two different models to determine if one would have survived the Titanic sinking, and see if one is significantly more accurate.</p>
+    <p>Let’s have a look at the famous Kaggle dataset and build two different models to determine if one would have survived the Titanic sinking,
+        and see if one model is significantly more accurate than the other.</p>
     Let’s look at the dataset:</p>
 
-    <p>What is of interest to us is the gender, class and age of each passenger and whether they made it or not. The rest will not be useful to train our model.
-    We first need to encode the gender and the class. Let’s first map the gender:</p>
+    <img src="ressources/analyses/titanic_code_1.jpg">
 
-    <p>Then use the get_dummies() method on the Class column. We have no use for the third class column
-    (if a passenger is in neither first or second class, it means that they are in third), so let’s drop it.</p>
+    <p>What is of interest to us is the gender, class and age of each passenger and whether they made it or not.
+        The rest will not be useful to train our model so we can drop them.
+    We first need to encode the gender and the class. Let’s first use the get_dummies() method on the Class column.
+    We have no use for the third class column
+    (if a passenger is in neither first or second class, it means that they are in third),
+    so let’s drop it.:</p>
 
-	<p>We should check if there are any empty lines.</p>
+    <img src="ressources/analyses/titanic_code_2.jpg">
+
+    <p>Then mapping the gender </p>
+
+    <img src="ressources/analyses/titanic_code_3.jpg">
+
+    <p>We should check if there are any empty lines.</p>
+    
+    <img src="ressources/analyses/titanic_code_4.jpg">
 
 	<p>Looks like there are just a few in the age column. Let’s fill them with the mean age of the passengers.</p>
 
-    <p>Now let’s standardize our inputs.</p>
+    <img src="ressources/analyses/titanic_code_5.jpg">
 
-    <p>Let’s clean our dataframe and check it one last time before creating our models:</p>
+    <p>Now let’s split our data and standardize our inputs.</p>
+
+    <img src="ressources/analyses/titanic_code_6.jpg">
 
     <p>Looks like we’re good to go. Let’s try two different solutions:</p>
 
     <p>Logistic Regression</p>
 
+    <img src="ressources/analyses/titanic_code_7.jpg">
+
     <p>K-Nearest Neighbors</p>
+
+    <img src="ressources/analyses/titanic_code_8.jpg">
+    <img src="ressources/analyses/titanic_code_9.jpg">
 
     <p>It seems like K-Nearest Neighbors is performing a bit better than Logistic Regression, so we will use it to feed it new data
     and see how me and my better half are fairing. </p>
     
     <p>I’m 33, male, and my wife would not let me book us anything other than first class
     (assumedly because it would enhance our survival chances, which is hard to argue against). Let’s see how we did:</p>
+
+    <img src="ressources/analyses/titanic_code_10.jpg">
 	
 	<p>Well… I don’t like my odds. She, on the other hand, will be fine (after a period of mourning). </p>
 
     <p>I assume my probable demise is a consequence of the “women & children first” rule aboard. Let’s check this assumption:
     what is the survival rate of women vs. men, and the survival rate of passengers under 14?</p>
 
+    <img src="ressources/analyses/titanic_code_11.jpg">
+    <img src="ressources/analyses/titanic_code_12.jpg">
+
+
     <p>Survival rate of women was 74.2%, while men’s was only 18.9%. As for passengers under 14, it was 58.44%,
-    although it should be noted that among those who did not make it, almost all of them were in third class.
+    although it should be noted that among those who did not make it, almost all of them were in third class.</p>
     
-    <p>Where you were staying definitely had some incidence on the outcome, as could be expected.
-    So it seems that our first instinct was right and that our model thinks I would likely not make it due to my gender.</p>
+    <p>Where you were staying definitely had some incidence on the outcome, although not as much, clearly, as your gender.</p>
 
     <p>I’ll just book a flight next time…</p>
 

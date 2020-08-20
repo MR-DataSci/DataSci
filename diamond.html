@@ -12,7 +12,7 @@
     <header class="flex-container">
         <a href="index.html">
             <div class="logo">
-                <img src="ressources/img/logo.png" />
+                <img src="ressources/img/logo.jpg" />
             </div>
         </a>
 
@@ -51,12 +51,23 @@
             The reason is that if we came across a diamond that we wanted to estimate,
             it would be pretty hard to get all of the other measurements that we have in this dataset.
             <br>With that in mind, let’s begin and look at what we have here:</p>
+
+
+
+        <img src="ressources/analyses/diamond_code_1.jpg">
+        <img src="ressources/analyses/diamond_code_2.jpg">
         
-        <p>First off, good news: we have no empty lines, which is going to make our task easier.
-            However, we see that the prices cover a huge range
+        <p>First, we have no empty lines, which is going to make our task easier.
+            However, we see that the prices cover a range
             going from $326 to $18,823 but with a median price at $2,401.
             This means that we can expect our model to be much more efficient for lower priced diamonds
             than more expensive ones since it will have had many more examples to train on. Let's check out the distribution of prices visually.</p>
+
+        <img src="ressources/analyses/diamond_code_3.jpg">
+        <figcaption>Price distribution</figcaption>
+        <br>
+        <img src="ressources/analyses/diamond_code_4.jpg">
+        <figcaption>Carat distribution</figcaption>
 
         <p>Looking at the distribution of the weight in carats of the diamonds in our dataset, it seems clear that our prices are correlated
             to the weight of the diamonds, which feels like it makes sense, even without knowing much about diamonds.</p>
@@ -69,37 +80,62 @@
             <li>Clarity is noted on a scale from IF (being the best, “Internally Flawless”) to I3 (being the worst, “Included”);</li>
             <li>Color is noted on a scale from D (being the best) to Z;</li>
             <li>Cut, according to GIA is noted from Excellent to Poor. Here, we find “Premium” and “Ideal”.
-                It does not really fit here, so let’s assume here that “Premium” is better than “Very Good” and that “Ideal” is the best;</li>
+                It does not really fit here, so let’s assume that “Premium” is better than “Very Good” and that “Ideal” is the best;</li>
         </ul>
 
-        <p>Okay, now that we have done that, let's drop the original columns as well as the ones we decided earlier were not
-            going to be useful for us.</p>
-        
-        <p>Now that we have a clean dataset, let's save our inputs in a variable and our target prices in another</p>
+        <img src="ressources/analyses/diamond_code_5.jpg">
 
-        <p>We have several ways to create our model. We could do a multiple linear regression, but it might be a bit simplistic, 
-            so let's see what a neural network could do for us.</p>
+        <p>Now that we have done that, let's get to the standardizing and splitting our data.
+            We will first drop the original columns as well as
+            the ones we decided earlier were not going to be useful for us.</p>
 
-        <p>Let's split our data into three: train, validation and test, and standardize our inputs</p>
+        <img src="ressources/analyses/diamond_code_6.jpg">
 
-        <p>We are ready to build our neural network. I have experiemented with different versions, number of layers, optimizers, etc.
-            This is one version that returns a good result.</p>
+        <p>Let's save our inputs in a variable and our target prices in another,
+            and split them in three sections: train, validation, and test
+            Finally, let's standardize everything.</p>
+
+        <img src="ressources/analyses/diamond_code_7.jpg">
+
+        <p>We are now ready to create our model. We have several ways to choose from,
+             and since we are looking for a price given characteristics, so we could do a multiple linear regression,
+            but it might be a bit simplistic, 
+            so instead let's see what a neural network could do for us.</p>
+
+        <p>I have experiemented with different versions, number of layers, optimizers, etc.
+            and this is one version that returns a good result.</p>
+
+        <img src="ressources/analyses/diamond_code_8.jpg">
+        <img src="ressources/analyses/diamond_code_9.jpg">
 
         <p>We plot our losses to make sure there was no overfitting.</p>
 
-        <p>And now let's plot our predictions on our test data against the actual targets. If we get something close to a 45° line, it means
-            that our model performed well.</p>
+        <img src="ressources/analyses/diamond_code_10.jpg">
+
+        <p>Seems like we did well, since our validation loss does not cross the train loss.
+            Now let's plot our predictions on our test data against the actual targets.
+             If we get something close to a 45° line, it means that our model performed well.</p>
+
+        <img src="ressources/analyses/diamond_code_11.jpg">
 
         <p>Looks pretty good, doesn't it? Just to confirm, let's get a metric value on how we did.</p>
 
-        <p>We get a value of around $600. What does that mean? It means that on average, our model is able to make predictions that will be
+        <img src="ressources/analyses/diamond_code_12.jpg">
+
+        <p>We get a root mean square error of around 600. What does that mean? It means that on average, our model is able to make predictions that will be
             within $600 of the actual price. (as a comparison, I ran a multiple linear regression model on the same dataset which returned
-            a root mean square error of $1,224, more than double what we have!</p>
+            a root mean square error of 1,224, more than double what we have!</p>
 
         <p>Is it a good result? I think that given our dataset, it is actually a pretty good one. Remember that 75% of our diamonds
             were $5,324 or less, but that our maximum value was almost $19,000! Yet, despite of that our model is still able to predict credible prices even for bigger gems.</p>
 
         <p>Let's look at a couple of examples:</p>
+
+        <img src="ressources/analyses/diamond_code_13.jpg">
+
+        <img src="ressources/analyses/diamond_code_14.jpg">
+
+        <img src="ressources/analyses/diamond_code_15.jpg">
 
         <p>And there it is! This works pretty well for diamonds that are 1 or 1.5 carat maximum.
             However, if we wanted to really accurately predict prices for really big diamonds, we would first need to update our model
@@ -111,7 +147,7 @@
         
         <p>Check out my other <a href="analyses.html">projects!</a></p>
 
-        <p>Dataset from <a href="https://www.kaggle.com/shivam2503/diamonds">Kaggle</a>, full code can be found: <a href="ressources/analyses/diamonds-NN.html">here</a>.</p>
+        <p>Dataset from <a href="https://www.kaggle.com/shivam2503/diamonds">Kaggle</a>.</p>
  
     </div>
 

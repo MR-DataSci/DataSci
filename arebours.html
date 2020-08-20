@@ -12,7 +12,7 @@
     <header class="flex-container">
         <a href="index.html">
             <div class="logo">
-                <img src="ressources/img/logo.png" />
+                <img src="ressources/img/logo.jpg" />
             </div>
         </a>
 
@@ -25,25 +25,36 @@
     </header>  
     
     <main>
+        <a href="analyses.html">
         <div class='banner'>
 
             <h1>TL:DR - French Litterature Edition</h1>
 
         </div>
+        </a>
 
         <div class="content analysescomment">
 
-        <p>A rebours (Against the Grain) is a staple of the decadent literary movement.
-            Written by J.K Huysmans in 1884, it depicts the life of an eccentric, misanthropic nobleman named des Esseintes.
-            One of the peculiarities of the novel is the fact that it does not follow a classic story structure.
-            Instead, each chapter is essentially a description of des Esseintes’ s house, his book collection, views on religion, etc.
-            It is a very interesting and intriguing piece of literature but I would not call it an easy read,
-            and that is actually why I am writing about this today.</p>
+            <p>A rebours (Against the Grain) is a staple of the decadent literary movement.
+                Written by J.K Huysmans in 1884, it depicts the life of an eccentric, misanthropic nobleman named des Esseintes.
+                One of the peculiarities of the novel is the fact that it does not follow a classic story structure.
+                Instead, each chapter is essentially a description of des Esseintes’ s house, his book collection, views on religion, etc.
+                It is a very interesting and intriguing piece of litterature but I would not call it an easy read,
+                and that is actually why I am writing about this today.</p>
             
             <p>Instead of going through the book ourselves, let’s distinguish the main theme of each chapter using Natural Language Processing.</p>
             
             <p>First, we need to actually get the book and create our dataset. We could copy paste everything, but should we?
                 That sounds troublesome. Luckily, we can use Beautiful Soup: </p>
+
+            <img src="ressources/analyses/arebours_code_1.jpg">
+            <figcaption>Finding all the links in the wikisource page to quickly create a list containing
+                the links to the individual chapters.
+            </figcaption>
+            <img src="ressources/analyses/arebours_code_2.jpg">
+            <figcaption>Using a two loops to get the text from each chapter individually</figcaption>
+            <img src="ressources/analyses/arebours_code_3.jpg">
+
 
             <p>Now that we have everything set, let's start our analysis. 
             NLP is interesting because it leaves room for much interpretation and adjustment.
@@ -62,18 +73,44 @@
                 <li>Poetry & Litterature</li>
                 <li>Colors & Gems</li>
             </ul>
+
+            <img src="ressources/analyses/arebours_code_4.jpg">
+
+            <p>With this, we can create a dataframe containing the "value" of each theme in each chapter
+                These values, in themselves are meaningless. They are just indicating the importance of
+                the corresponding theme.</p>
+
+            <img src="ressources/analyses/arebours_code_5.jpg">
+            <img src="ressources/analyses/arebours_code_6.jpg">
+            <figcaption>Joining with the original dataframe containing the text</figcaption>
+
+            <p>To see the main theme or themes more clearly, let's say that there has to be 
+                a certain minimum value for us to consider that theme a "main one". In this case,
+            I chose to set this value to 0.2. Anything below will be reset as a 0,
+            anything over will be 1, essentially becoming a binary "main theme" or
+            "not a main theme" value.</p>
+
+            <img src="ressources/analyses/arebours_code_7.jpg">
             
-            <p>Now, what? We should make it visually appealing and readable, so let’s switch over to Tableau to do just that.</p>
+            <p>Now, what? We should make it visually appealing and readable.
+                Of course, we have different ways to do that thanks to
+                Matplotlib or Seaborn, but let’s change things and switch over to Tableau to do just that.</p>
 
             <img src="ressources/img/a rebours-tableau.jpg">
             
-            <p>And here we go. We have a nice visual representation of each theme and where it is referenced.
-                Two chapters of the book to check if our findings make sense:</p>
-            <p><a href="https://en.wikisource.org/wiki/Against_the_Grain/Chapter_IV">Chapter_IV (in which we are expecting to read about colors and gems</a></p>
-            <p><a href="https://en.wikisource.org/wiki/Against_the_Grain/Chapter_XI">Chapter_XI (in which we are expecting to read about travel</a></p>
+            <p>And here we go. We have a nice visual representation of each theme and where it is referenced.</p>
+            
+            <p>Before concluding, we can look at two chapters of the book to check if our analysis
+                and visualization makes sense:</p>
+            <p><a href="https://en.wikisource.org/wiki/Against_the_Grain/Chapter_IV">Chapter IV</a>(en) (in which we are expecting to read about colors and gems)</p>
+            <p><a href="https://en.wikisource.org/wiki/Against_the_Grain/Chapter_XI">Chapter XI</a>(en) (in which we are expecting to read about travel)</p>
 
-            <p>Voilà! But still, do read the book, it is really great.</p>
-               
+
+            <p>Et voilà! We successfully used Beautiful Soup to get the entire text of a book,
+                and then NLP to identify the main themes accross!</p>
+            
+            <br><p><i>(still though, do read the book, it is really great)</i></p>
+            
     </div>
 
     </main>
