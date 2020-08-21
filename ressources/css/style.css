@@ -9,7 +9,7 @@ body {
 
 header {
     width:100%;
-    height:100px;
+    height:fit-content;
     position: fixed;
     top:0;
     background-color: white;
@@ -34,6 +34,59 @@ nav {
     justify-items: center;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 750px) {
+    .logo,
+    nav {
+    height:50px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .logo {
+        width:100px;
+        margin-left: 20px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    nav {
+        width:400px;
+    }
+
+    .banner p{
+        font-size: 22px;
+    }
+
+    #navlink {
+        width: 150px;
+        display: block;
+        text-align: center;
+    }
+
+    .dropdown {
+        margin-top: 15px;
+        padding:10px;
+        height:fit-content;
+        width: 130px;
+        background-color: rgba(7, 0, 56,1);
+        list-style-type: none;
+        border:white solid 1px;
+        z-index:15;
+        position: fixed;
+        text-align: center;
+        opacity: 0;
+    }
+
+    #articleDropdown {
+        color: white;
+        font-size: 15px;
+    }
 
 }
 
@@ -101,6 +154,7 @@ a {
     margin-left:auto;
     margin-right:auto;
     background-color: rgb(7, 0, 56);
+    position: relative;
 }
 
 .banner p{
@@ -123,6 +177,7 @@ main {
     flex-wrap: wrap;
     margin: 25px 0;
     padding: 50px 0;
+    position: relative;
 }
 
 /* Box general animation */
@@ -233,10 +288,11 @@ footer span {
 .bio {
     width: 75%;
     margin:auto;
+    position: relative;
 }
 
 .bio img {
-    width: 1000px;
+    width: 75%;
     margin-bottom:50px;
     margin-left:auto;
     margin-right:auto;
