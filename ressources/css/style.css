@@ -36,60 +36,6 @@ nav {
     justify-content: center;
 }
 
-@media screen and (max-width: 750px) {
-    .logo,
-    nav {
-    height:50px;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
-    }
-
-    .logo {
-        width:100px;
-        margin-left: 20px;
-    }
-
-    .logo img {
-        height: 30px;
-    }
-
-    nav {
-        width:400px;
-    }
-
-    .banner p{
-        font-size: 22px;
-    }
-
-    #navlink {
-        width: 150px;
-        display: block;
-        text-align: center;
-    }
-
-    .dropdown {
-        margin-top: 15px;
-        padding:10px;
-        height:fit-content;
-        width: 130px;
-        background-color: rgba(7, 0, 56,1);
-        list-style-type: none;
-        border:white solid 1px;
-        z-index:15;
-        position: fixed;
-        text-align: center;
-        opacity: 0;
-    }
-
-    #articleDropdown {
-        color: white;
-        font-size: 15px;
-    }
-
-}
-
 .logo {
     width:150px;
     margin-left: 40px;
@@ -97,6 +43,9 @@ nav {
 
 nav {
     width:600px;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
 }
 
 .logo img {
@@ -292,10 +241,10 @@ footer span {
 }
 
 .bio img {
-    width: 75%;
+    width: 1000px;
+    height: 370px;
+    margin: auto;
     margin-bottom:50px;
-    margin-left:auto;
-    margin-right:auto;
 }
 
 
@@ -366,7 +315,7 @@ footer span {
 
 /* Analyses specifics */
 .analysescomment {
-    width:1200px;
+    width:75%;
     flex-direction: column;
     position: relative;
     margin:auto;
@@ -377,7 +326,7 @@ footer span {
     display: block;
     margin: auto;
     padding: 10px;
-    width:800px;
+    width:75%;
 }
 
 figcaption {
@@ -386,19 +335,11 @@ figcaption {
     font-style: italic;
 }
 
-.code {
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.05);
-    border: black solid 1px;
-}
-
 iframe {
     display: block;
     margin: auto;
-    padding: 20px;
-    width:600px;
+    padding:20px;
+    width:50%;
     background-color: rgb(7, 0, 56);
 }
 
@@ -449,4 +390,70 @@ iframe {
 .message {
     height: 200px;
     resize:none;
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .logo,
+    nav {
+    height:50px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .logo {
+        width:100px;
+        margin-left: 20px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    nav {
+        width:400px;
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+
+    .banner p{
+        font-size: 20px;
+    }
+
+    #navlink {
+        width: 150px;
+        display: block;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .dropdown {
+        margin-top: 15px;
+        padding:10px;
+        height:fit-content;
+        width: 130px;
+        background-color: rgba(7, 0, 56,1);
+        list-style-type: none;
+        border:white solid 1px;
+        z-index:15;
+        position: fixed;
+        text-align: center;
+        opacity: 0;
+    }
+
+    #articleDropdown {
+        color: white;
+        font-size: 13px;
+    }
+    
+    .bio img {
+        width: 1000px;
+        height: 370px;
+        margin: auto;
+        margin-bottom:50px;
+    }
 }
