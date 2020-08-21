@@ -394,7 +394,11 @@ iframe {
 
 
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
+    header {
+    justify-content: space-evenly;
+    }
+
     .logo,
     nav {
     height:50px;
