@@ -460,4 +460,9 @@ iframe {
         margin: auto;
         margin-bottom:50px;
     }
+
+    .articleDescriptionBox {
+        font-size: 12px;
+        width: 400px;
+    }
 }
