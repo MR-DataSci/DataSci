@@ -476,5 +476,7 @@ iframe {
 
     .articleDescriptionBox {
         font-size: 10px;
+        right: 15%;
+        width: 40%;
     }
 }
