@@ -293,8 +293,9 @@ footer span {
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    width:150px;
-    height:50px;
+    width:20%;
+    padding: 1%;
+    height:auto;
     color:white;
     border: white solid 1px;
 }
