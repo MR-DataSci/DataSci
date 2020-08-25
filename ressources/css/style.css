@@ -397,7 +397,7 @@ iframe {
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) and (min-width: 4510px){
     header {
     justify-content: space-evenly;
     }
@@ -427,8 +427,12 @@ iframe {
         height: fit-content;
     }
 
+    .footer span {
+        font-size: 13px;
+    }
+
     .banner h4{
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .banner p{
@@ -462,13 +466,13 @@ iframe {
     }
 
     .articleBox {
-        width: 100%;
-        height: 100px;
+        width: 80%;
+        height: 150px;
     }
 
     .articleImageBox img {
-        width:100px;
-        height:100px;
+        width:150px;
+        height:150px;
     }
 
     .articleImageBox {
@@ -478,12 +482,23 @@ iframe {
 
     .articlenameBox {
         font-size: 12px;
-        width: 100%;
+        width: 80%;
+        margin: auto;
     }
 
     .articleDescriptionBox {
         font-size: 10px;
         right: 7%;
         width: 50%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .articleBox {
+        width: 100%;
+    }
+
+    .articlenameBox {
+        width: 100%;
     }
 }
