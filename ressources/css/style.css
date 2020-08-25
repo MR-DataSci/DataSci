@@ -241,8 +241,8 @@ footer span {
 }
 
 .bio img {
-    width: 1000px;
-    height: 370px;
+    width: 75%;
+    height: auto;
     margin: auto;
     margin-bottom:50px;
 }
