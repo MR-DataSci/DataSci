@@ -277,12 +277,12 @@ footer span {
 }
 
 .articleDescriptionBox {
-    width: 500px;
+    width: 35%;
     height: auto;
     display: inline-block;
     color:rgb(7, 0, 56);
     position: absolute;
-    right:25%;
+    right:20%;
     opacity: 0;
     color:white;
 }
@@ -463,6 +463,5 @@ iframe {
 
     .articleDescriptionBox {
         font-size: 12px;
-        width: 400px;
     }
 }
