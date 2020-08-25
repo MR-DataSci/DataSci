@@ -397,7 +397,7 @@ iframe {
 
 
 
-@media screen and (max-width: 800px) and (min-width: 4510px){
+@media screen and (max-width: 800px) and (min-width: 451px){
     header {
     justify-content: space-evenly;
     }
