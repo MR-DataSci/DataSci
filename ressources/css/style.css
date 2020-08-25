@@ -494,11 +494,97 @@ iframe {
 }
 
 @media screen and (max-width: 450px) {
-    .articleBox {
-        width: 100%;
-    }
-
-    .articlenameBox {
-        width: 100%;
-    }
+    header {
+        justify-content: space-evenly;
+        }
+    
+        .logo,
+        nav {
+        height:50px;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        }
+    
+        .logo {
+            width:100px;
+            margin-left: 20px;
+        }
+    
+        .logo img {
+            height: 30px;
+        }
+    
+        nav {
+            width:400px;
+            display: flex;
+            flex-wrap: wrap;
+            height: fit-content;
+        }
+    
+        .footer span {
+            font-size: 13px;
+        }
+    
+        .banner h4{
+            font-size: 16px;
+        }
+    
+        .banner p{
+            font-size: 15px;
+        }
+    
+        #navlink {
+            width: 150px;
+            display: block;
+            text-align: center;
+            font-size: 13px;
+        }
+    
+        .dropdown {
+            margin-top: 15px;
+            padding:10px;
+            height:fit-content;
+            width: 130px;
+            background-color: rgba(7, 0, 56,1);
+            list-style-type: none;
+            border:white solid 1px;
+            z-index:15;
+            position: fixed;
+            text-align: center;
+            opacity: 0;
+        }
+    
+        #articleDropdown {
+            color: white;
+            font-size: 13px;
+        }
+    
+        .articleBox {
+            width: 100%;
+            height: 150px;
+        }
+    
+        .articleImageBox img {
+            width:150px;
+            height:150px;
+        }
+    
+        .articleImageBox {
+            width: 200px;
+            height: auto;
+        }
+    
+        .articlenameBox {
+            font-size: 12px;
+            width: 100%;
+            margin: auto;
+        }
+    
+        .articleDescriptionBox {
+            font-size: 10px;
+            right: 7%;
+            width: 50%;
+        }
 }
