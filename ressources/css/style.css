@@ -293,7 +293,7 @@ footer span {
     justify-content: center;
     align-items: center;
     margin-top: 5%;
-    width:20%;
+    width:25%;
     padding: 1%;
     height:auto;
     color:white;
@@ -470,7 +470,11 @@ iframe {
         height: auto;
     }
 
-    .articleDescriptionBox {
+    .articlenameBox {
         font-size: 12px;
+    }
+
+    .articleDescriptionBox {
+        font-size: 10px;
     }
 }
