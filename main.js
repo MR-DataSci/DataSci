@@ -55,18 +55,18 @@ $(document).ready(() => {
         },anim)
     })
     $('#navlinkDrop').on('mouseenter', (event) => {
-        $('.dropdown').animate({opacity:'1'},400);
+        $('.dropdown').slideDown(400)
         $(event.currentTarget).animate({
             backgroundColor:'rgb(7,0,56)',
             color:'white'
-        },400)
+        })
     })
     $('.dropdown').on('mouseleave', () => {
-        $('.dropdown').animate({opacity:'0'},400);
+        $('.dropdown').slideUp(400)
         $('#navlinkDrop').animate({
             backgroundColor:'white',
             color:'rgb(7,0,56)'
-        },400)
+        },600)
     })
     
 })
