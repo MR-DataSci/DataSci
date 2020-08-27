@@ -80,19 +80,20 @@ nav {
     justify-items: center;
     align-items: center;
     justify-content: center;
+    border: black solid 1px;
 }
 
 .logo {
-    width:150px;
-    margin-left: 40px;
+    width:100%;
+    margin-left: 15%;
 }
 
 nav {
-    width:60%;
+    width:80%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
     height: fit-content;
-    
 }
 
 .logo img {
