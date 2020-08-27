@@ -451,8 +451,8 @@ iframe {
     display: block;
     margin: auto;
     padding:20px;
-    width:50%;
-    background-color: rgb(7, 0, 56);
+    width:65%;
+    background-color: rgba(7, 0, 56);
 }
 
 
