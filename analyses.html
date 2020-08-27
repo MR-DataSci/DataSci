@@ -10,26 +10,26 @@
             <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
             <script id="articlesTemplate" type="text/x-handlebars-template">
                 {{#each analysesInfo}}
-                
-                <h3 class="articlenameBox">{{this.name}}</h3>
-                <div class="articleBox">
-                
-                            <div class="articleImageBox">
-                                <img src={{this.image}}>
+                <div class="article">
+                    <h3 class="articlenameBox">{{this.name}}</h3>
+                    <div class="articleBox">
+                    
+                                <div class="articleImageBox">
+                                    <img src={{this.image}}>
+                                    
+                                </div>
                                 
-                            </div>
-                            
-                            <div class="articleDescriptionBox">
-                                
-                                <h4>{{this.description}}</h4>
+                                <div class="articleDescriptionBox">
+                                    
+                                    <h4>{{this.description}}</h4>
 
-                                <a href={{this.link}} alt={{this.name}}>
-                                    <h5 id="articleButton">Learn more</h5>
-                                </a>
-                            </div> 
-                        
+                                    <a href={{this.link}} alt={{this.name}}>
+                                        <h5 id="articleButton">Learn more</h5>
+                                    </a>
+                                </div> 
+                            
+                    </div>
                 </div>
-                
                 {{/each}}
             </script>
 

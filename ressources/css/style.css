@@ -168,6 +168,36 @@ main {
 }
 
 /* Box specifics */
+.box1 {
+    animation: leftAnimation ease-out 1.2s; 
+}
+
+@keyframes leftAnimation { 
+    0% { 
+        transform: translateX(-100%);
+        opacity: 0; 
+    } 
+    100% { 
+        transform: translateX(0%); 
+        opacity: 1; 
+     } 
+} 
+
+.box2 {
+    animation: rightAnimation ease-out 1.2s; 
+}
+
+@keyframes rightAnimation { 
+    0% { 
+        transform: translateX(100%); 
+        opacity: 0; 
+    } 
+    100% { 
+        transform: translateX(0%); 
+        opacity: 1; 
+     } 
+} 
+
 .box1 img {
     height:100%;
     width: auto;
@@ -242,20 +272,35 @@ footer span {
     position: relative;
 }
 
+@keyframes bottomAnimation { 
+    0% { 
+        transform: translateY(100%); 
+        opacity: 0; 
+    } 
+    100% { 
+        transform: translateX(0%); 
+        opacity: 1; 
+     } 
+} 
+
 .bio img {
     width: 75%;
     height: auto;
     margin: auto;
     margin-bottom:2%;
+    animation: fadeinAnimation ease-out 1.2s; 
 }
 
 .bio .content {
     text-align: justify;
+    animation: bottomAnimation ease-out 1.2s; 
 }
 
-
-
 /* Article pages specifics */
+.article {
+    animation: rightAnimation ease-out 1.2s;
+}
+
 .articleList {
     width: 100%;
     margin: 20px auto;
@@ -266,7 +311,7 @@ footer span {
     height: 200px;
     margin: auto;
     margin-bottom: 75px;
-    background-color: rgba(7, 0, 56, 0.85);
+    background-color: rgba(7, 0, 56, 0.85); 
 }
 
 .articleImageBox {
@@ -319,6 +364,7 @@ footer span {
     color: white;
     background-color: rgba(7, 0, 56, 0.95);
     border: white solid 2px;
+    
 }
 
 /* Analyses specifics */
@@ -328,7 +374,17 @@ footer span {
     position: relative;
     margin:auto;
     text-align: justify;
+    animation: fadeinAnimation ease-in 1s; 
 }
+
+@keyframes fadeinAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+} 
 
 .analysescomment img {
     display: block;
@@ -368,6 +424,11 @@ iframe {
 .contact img{
     width:400px;
     padding:50px;
+    animation: leftAnimation ease-out 1.2s; 
+}
+
+.inquiries {
+    animation: rightAnimation ease-out 1.2s; 
 }
 
 .form-container {
