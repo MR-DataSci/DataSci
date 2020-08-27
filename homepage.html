@@ -3,7 +3,7 @@
 <body>
 
     <head>
-        <title>MR DataSci - Contact</title> 
+        <title>MR DataSci</title> 
         <link href="ressources/css/style.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -19,7 +19,7 @@
     </head>
 
     <header>
-        <a href="homepage.html">
+        <a href="index.html">
             <div class="logo">
                 <img src="ressources/img/logo.jpg" />
             </div>
@@ -37,47 +37,54 @@
             <span><a class="navlink" href="contact.html"> Contact </a></span>
         </nav>
 
-    </header>  
-    
+    </header>   
+
     <main>
         <div class='banner'>
 
-            <h1>Contact Me</h1>
+            <h1>Welcome to MR DataSci</h1>
+            <p>Matthieu Rasset is a data scientist
+            exploring & creating powerful predictive models with Python</p>
 
         </div>
 
-    <div class="contact">
-
-        <img id= contact-logo src="ressources/img/logo.jpg" />
-
-        <div class="inquiries">
-            <h2>Let's get in touch!</h2>
-
-            <div class="form-container">
-                <form role="form" action="https://formspree.io/xbjzbeay" method="post" >
-                    <input  class="inputs" name="name" required="required" type="text" placeholder="Enter Your Name" />
-                    <br><input  class="inputs" name="email" required="required" type="email" placeholder="Enter your Email"/>
-                    <br><br><textarea  class="inputs message"name="message" placeholder="Enter Your Message"></textarea>
-                    <br><button type="submit" value="Send">Send</button>
-                </form>
-
-            </div>
-
-            <p>Or email me at: mr (at) rassetintl.com</p>
-
-            
-            
-        </div> 
-
+        <div class= "item-line">
+            <a href="analyses.html" class="box box1" title="Analyses & Models" id="box_border">
+                <div class="txt">
+                    <h2>analyses & models</h2>
+                    
+                </div>
+                <div class="illustration">
+                    <img src="ressources/img/DS.jpg">
+                </div>
+                
+            </a>
         
-    </div>
+            <a href="about.html" class="box box2" title="About" id="box_border">
+                <div class="txt">
+                    <h2>about matthieu</h2>
+                </div>
+                <div class="illustration">
+                    <img src="ressources/img/profile.jpg">
+                </div>
+                
+            </a>
+        </div>
+
+
+        <div class ="item-line">
+
+            <a href="contact.html"  id="homepagecontact" title="Contact">
+                <h2>Contact me</h2>
+            </a>
+
+        </div>
 
     </main>
 
     <footer >
         <span>&copy; MR DataSci 2020</span>
     </footer>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
     <script src="main.js"></script>

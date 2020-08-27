@@ -1,92 +1,29 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-    <head>
-        <title>MR DataSci</title> 
-        <link href="ressources/css/style.css" type="text/css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <meta charset="UTF-8">
-        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-            <script id="articlesTemplate" type="text/x-handlebars-template">
-                {{#each analysesInfo}}
-
-                    <li><a id="articleDropdown" href={{this.link}}>{{this.name}}</a></li>
+    <body>
+        <head>
+            <title>MR DataSci</title> 
+            <link href="ressources/css/style.css" type="text/css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+            <link rel="icon" href="favicon.ico" type="image/x-icon" />
+            <meta charset="UTF-8">
+        </head>
+        <a href = "homepage.html">
+        <div class="landingLogoBox">
+            <div class="landingLogoImages">
+                <img src = "ressources/img/logo-landing.png">
+                <img id="animatedCircle" src = "ressources/img/logo-landing-circle.png">
                 
-                {{/each}}
-            </script>
-    </head>
-
-    <header>
-        <a href="index.html">
-            <div class="logo">
-                <img src="ressources/img/logo.jpg" />
             </div>
+            <h2>click to enter</h2>
+        </div>
         </a>
-
-        <nav>
-            <span><a class="navlink" id="navlinkDrop" href="analyses.html"> Analyses & Models </a>
-                <div id = info class="dropdown">
-                    <ul>
-                        
-                    </ul>
-                </div>
-            </span>
-            <span><a class="navlink" href="about.html"> About </a></span>
-            <span><a class="navlink" href="contact.html"> Contact </a></span>
-        </nav>
-
-    </header>   
-
-    <main>
-        <div class='banner'>
-
-            <h1>Welcome to MR DataSci</h1>
-            <p>Matthieu Rasset is a data scientist
-            exploring & creating powerful predictive models with Python</p>
-
-        </div>
-
-        <div class= "item-line">
-            <a href="analyses.html" class="box box1" title="Analyses & Models" id="box_border">
-                <div class="txt">
-                    <h2>analyses & models</h2>
-                    
-                </div>
-                <div class="illustration">
-                    <img src="ressources/img/DS.jpg">
-                </div>
-                
-            </a>
         
-            <a href="about.html" class="box box2" title="About" id="box_border">
-                <div class="txt">
-                    <h2>about matthieu</h2>
-                </div>
-                <div class="illustration">
-                    <img src="ressources/img/profile.jpg">
-                </div>
-                
-            </a>
-        </div>
+        
 
 
-        <div class ="item-line">
-
-            <a href="contact.html"  id="homepagecontact" title="Contact">
-                <h2>Contact me</h2>
-            </a>
-
-        </div>
-
-    </main>
-
-    <footer >
-        <span>&copy; MR DataSci 2020</span>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
-    <script src="main.js"></script>
-</body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
+        <script src="main.js"></script>
+    </body>
 </html>
