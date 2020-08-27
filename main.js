@@ -54,7 +54,7 @@ $(document).ready(() => {
             opacity: '0'
         },anim)
     })
-    $('#navlinkDrop').on('mouseenter', (event) => {
+    $('#navlinkDrop').on('mouseover', (event) => {
         $('.dropdown').slideDown(400)
         $(event.currentTarget).animate({
             backgroundColor:'rgb(7,0,56)',
