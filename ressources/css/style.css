@@ -28,8 +28,8 @@ body {
 }
 
 .landingLogoImages img {
-    width:35%;
-    height:auto;
+    width:auto;
+    height:60%;
     position: fixed;
 }
 
@@ -50,11 +50,6 @@ body {
 }
 
 .landingLogoBox h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-    height: 15%;
     font-variant: small-caps;
 }
 
