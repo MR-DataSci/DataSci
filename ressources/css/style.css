@@ -42,27 +42,28 @@ nav {
 }
 
 nav {
-    width:600px;
+    width:60%;
     display: flex;
     flex-wrap: wrap;
     height: fit-content;
+    
 }
 
 .logo img {
     height: 40px;
 }
 
-#navlink {
-    width: 200px;
+.navlink {
+    width: 250px;
     display: block;
     text-align: center;
+    border: white solid 1px;
 }
 
 .dropdown {
-    margin-top: 15px;
     padding:15px;
     height:fit-content;
-    width: 170px;
+    width: 220px;
     background-color: rgba(7, 0, 56,1);
     list-style-type: none;
     border:white solid 1px;
@@ -245,7 +246,11 @@ footer span {
     width: 75%;
     height: auto;
     margin: auto;
-    margin-bottom:50px;
+    margin-bottom:2%;
+}
+
+.bio .content {
+    text-align: justify;
 }
 
 
@@ -439,7 +444,7 @@ iframe {
         font-size: 15px;
     }
 
-    #navlink {
+    .navlink {
         width: 150px;
         display: block;
         text-align: center;
@@ -536,7 +541,7 @@ iframe {
             font-size: 15px;
         }
     
-        #navlink {
+        .navlink {
             width: 150px;
             display: block;
             text-align: center;

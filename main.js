@@ -54,11 +54,19 @@ $(document).ready(() => {
             opacity: '0'
         },anim)
     })
-    $('#navlink').on('mouseenter', (event) => {
-        $('.dropdown').animate({opacity:'1'},400)
+    $('#navlinkDrop').on('mouseenter', (event) => {
+        $('.dropdown').animate({opacity:'1'},400);
+        $(event.currentTarget).animate({
+            backgroundColor:'rgb(7,0,56)',
+            color:'white'
+        },400)
     })
     $('.dropdown').on('mouseleave', () => {
-        $('.dropdown').animate({opacity:'0'},400)
+        $('.dropdown').animate({opacity:'0'},400);
+        $('#navlinkDrop').animate({
+            backgroundColor:'white',
+            color:'rgb(7,0,56)'
+        },400)
     })
     
 })
