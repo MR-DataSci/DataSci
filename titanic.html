@@ -51,13 +51,16 @@
     <div class="analysescomment content">
 
         <p>Let’s have a look at the famous Kaggle dataset and build two different models to determine if one would have survived the Titanic sinking,
-            and see if one model is significantly more accurate than the other.</p>
-        Let’s look at the dataset:</p>
+            and see if one model is significantly more accurate than the other, and then create the following tool that will allow you to make your own predictions:</p>
+
+        <iframe src="https://datasci-titanic.herokuapp.com/" height="550px"> </iframe>
+
+        <p>Let’s look at the dataset:</p>
 
         <img src="ressources/analyses/titanic_code_1.jpg">
 
         <p>What is of interest to us is the gender, class and age of each passenger and whether they made it or not.
-            The rest will not be useful to train our model so we can drop them.
+        The rest will not be useful to train our model so we can drop them.
         We first need to encode the gender and the class. Let’s first use the get_dummies() method on the Class column.
         We have no use for the third class column
         (if a passenger is in neither first or second class, it means that they are in third),
@@ -108,17 +111,12 @@
         <img src="ressources/analyses/titanic_code_11.jpg">
         <img src="ressources/analyses/titanic_code_12.jpg">
 
-
         <p>Survival rate of women was 74.2%, while men’s was only 18.9%. As for passengers under 14, it was 58.44%,
         although it should be noted that among those who did not make it, almost all of them were in third class.</p>
         
         <p>Where you were staying definitely had some incidence on the outcome, although not as much, clearly, as your gender.</p>
 
         <p>I’ll just book a flight next time…</p>
-
-        <p>Try it yourself below:</p>
-
-        <iframe src="https://datasci-titanic.herokuapp.com/" height="550px"> </iframe>
 
         <p>Dataset from <a href="https://www.kaggle.com/c/titanic">Kaggle</a>, Full code available <a href="./analyses/Titanic-LRKNN.html">here</a>.</p>
             

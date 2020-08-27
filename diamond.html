@@ -50,12 +50,15 @@
 
     <div class="analysescomment content">
 
-        <p><a href="./about.html">When I started working in the jewelry industry</a>,
+        <iframe src="https://datasci-diamond.herokuapp.com/" height="750px"> </iframe>
+        <figcaption>Make your own estimations! <br>(diamond characteristics are explained below)</figcaption>
+
+        <br><p><a href="./about.html">When I started working in the jewelry industry</a>,
             I asked one of my coworkers how the prices of diamonds were set before brands bought them.
             She said that prices are set and weekly updated in a document called the Rapaport Diamond Report.
             The problem is that you need to be a subscriber in order to access it, and I don’t want to do that.
-            So instead, how about we look at the prices and corresponding characteristics of some diamonds
-            and create a model so we are able to determine the prices ourselves?</p>
+            So instead, how about we examine the prices and corresponding characteristics of some diamonds
+            to create a model able to determine diamond prices. We could then create the module above to make these estimations even more easily.</p>
         
         <p>Before we start, a quick note:
             the price of a diamond is mainly derived from what are commonly known as the 4C: Cut, Clarity, Carat, Color.
@@ -66,8 +69,6 @@
             The reason is that if we came across a diamond that we wanted to estimate,
             it would be pretty hard to get all of the other measurements that we have in this dataset.
             <br>With that in mind, let’s begin and look at what we have here:</p>
-
-
 
         <img src="ressources/analyses/diamond_code_1.jpg">
         <img src="ressources/analyses/diamond_code_2.jpg">
@@ -155,10 +156,6 @@
         <p>And there it is! This works pretty well for diamonds that are 1 or 1.5 carat maximum.
             However, if we wanted to really accurately predict prices for really big diamonds, we would first need to update our model
             with a bigger sample that would give us a better view of what is happening for these.</p>
-
-        <p>Underneath, you will find a fun tool that will allow you to make your own predictions extremely easily:</p>
-        
-        <iframe src="https://datasci-diamond.herokuapp.com/" height="750px"> </iframe>
         
         <p>Check out my other <a href="analyses.html">projects!</a></p>
 
