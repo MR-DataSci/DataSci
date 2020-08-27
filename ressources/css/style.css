@@ -29,7 +29,7 @@ body {
 
 .landingLogoImages img {
     width:auto;
-    height:60%;
+    height:55%;
     position: fixed;
 }
 
@@ -702,3 +702,4 @@ iframe {
             right: 7%;
             width: 50%;
         }
+}
