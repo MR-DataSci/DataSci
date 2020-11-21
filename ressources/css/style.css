@@ -177,12 +177,12 @@ main {
     position: relative;
 }
 
-.item-line a {
-    text-decoration: underline;
-}
-
 .intro {
     width: 75%
+}
+
+.intro a {
+    text-decoration: underline;
 }
 
 /* Box general animation */
