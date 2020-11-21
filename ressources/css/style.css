@@ -358,7 +358,7 @@ footer span {
 }
 
 .article {
-    animation: rightAnimation ease-out 1.2s;
+    animation: fadeinAnimation ease-out 2s;
 }
 
 .articleList {
