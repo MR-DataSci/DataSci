@@ -181,6 +181,9 @@ main {
     text-decoration: underline;
 }
 
+.intro {
+    width: 75%
+}
 
 /* Box general animation */
 
@@ -349,6 +352,11 @@ footer span {
 }
 
 /* Article pages specifics */
+.intro {
+    width: 75%;
+    margin:auto;
+}
+
 .article {
     animation: rightAnimation ease-out 1.2s;
 }
