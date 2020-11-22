@@ -287,16 +287,33 @@ main {
 
 .mini-logo {
     position: absolute;
-    height:80px;
-    width: 80px;
+    height:100px;
+    width: 100px;
     margin:auto;
     text-align: center;
+    animation: fadeinAnimation 4s ease-in-out;
 }
 
 .mini-logo img {
-    height: 80px;
-    width: 80px;
-    animation: fadeinAnimation 4s ease-in-out;
+    height: 100px;
+    width: 100px;
+    animation-name: minilogofadeinAnimation;
+    animation-iteration-count: infinite;
+    animation-duration: 4.5s;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes minilogofadeinAnimation { 
+    0% { 
+        opacity: 0;
+    } 
+    50% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+     } 
 }
 
 /* END BOX */
