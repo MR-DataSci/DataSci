@@ -502,7 +502,8 @@ iframe {
     animation: leftAnimation ease-out 1.2s; 
 }
 
-.inquiries h2, p{
+.inquiries h2,
+.inquiries p {
     animation: fadeinAnimation ease-in 2s; 
 }
 
