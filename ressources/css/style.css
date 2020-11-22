@@ -287,16 +287,16 @@ main {
 
 .mini-logo {
     position: absolute;
-    height:100px;
-    width: 100px;
+    height:80px;
+    width: 80px;
     margin:auto;
     text-align: center;
     animation: fadeinAnimation 4s ease-in-out;
 }
 
 .mini-logo img {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     animation-name: minilogofadeinAnimation;
     animation-iteration-count: infinite;
     animation-duration: 4.5s;
