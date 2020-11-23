@@ -7,6 +7,14 @@ const context = {
             description: 'Creating a price prediction tool using an artificial neural network',
             image: './ressources/img/diamond.jpg'
         },
+                
+        {
+            link: './arebours.html',
+            name: 'Text analysis',
+            description: 'Using Natural Language Processing, visualizing themes in a novel',
+            image: './ressources/img/arebours.jpg'
+        },
+
         {
             link: './titanic.html',
             name: 'Titanic survival prediction',
@@ -14,12 +22,6 @@ const context = {
             image: './ressources/img/titanic.jpg'
         },
         
-        {
-            link: './arebours.html',
-            name: 'Text analysis',
-            description: 'Using Natural Language Processing, visualizing themes in a novel',
-            image: './ressources/img/arebours.jpg'
-        },
         {
             link: './scrabble.html',
             name: 'Scrabble letter selection',
